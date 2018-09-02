@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> App Shell </title>
+    <style>
+        /* Normalize CSS */
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font: 16px 'Oxygen';
+            width: 100%;
+            height: 100%;
+            background: #ececec;
+        }
+
+        /* Navbar */
+
+        .full-width {
+            width: 100%;
+        }
+
+        .navbar {
+            background: #891fe0;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.54);
+        }
+
+        .navbar__list--items {
+            padding: 0;
+        }
+
+        .navbar__list--item {
+            list-style: none;
+            margin-right: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        /* Footer */
+
+        .footer {
+            color: #fff;
+            background: #891fe0;
+            height: 50px;
+        }
+
+        .footer__text {
+            text-align: center;
+        }
+
+        /* Reusable styles */
+
+        .row-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column-flex {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .align-left {
+            margin-left: 30px;
+        }
+
+        .align-right {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .align-bottom {
+            flex-grow: 1;
+            align-content: flex-end;
+        }
+
+        .align-center {
+            justify-content: center;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+    </style>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1976d2">
+</head>
+
+<body>
+    <!-- Navbar section -->
+    <header class="full-width">
+        <nav class="navbar row-flex">
+            <ul class="navbar__list--items row-flex align-left">
+                <li class="navbar__list--item">
+                    <a href="#" class="menu"> &#x2630; </a>
+                </li>
+                <li class="navbar__list--item">
+                    <a href="#" class="banner"> App Shell </a>
+                </li>
+            </ul>
+
+            <ul class="navbar__list--items row-flex align-right">
+                <li class="navbar__list--item">
+                    <a route="/">home</a>
+                </li>
+                <li class="navbar__list--item">
+                    <a route="#about">about</a>
+                </li>
+                <li class="navbar__list--item">
+                    <a route="#contact">contact</a>
+                </li>
+                <li class="navbar__list--item">
+                    <a route="#misc">misc</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Application Section -->
+    <main class="app row-flex align-center">
+        Main Application Content
+    </main>
+
+    <!-- Critical Scripts -->
+    <script src="lib/app.js" defer></script>
+</body>
+
+</html>
